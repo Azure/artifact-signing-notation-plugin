@@ -1,7 +1,7 @@
 # Makefile for Linux
 BUILD_DIR = ./bin
-PROJECT_DIR = ./Azure.Developer.TrustedSigning.NotationPlugin
-TEST_PROJECT_DIR = ./Azure.Developer.TrustedSigning.NotationPlugin.UnitTests
+PROJECT_DIR = ./Azure.Developer.ArtifactSigning.NotationPlugin
+TEST_PROJECT_DIR = ./Azure.Developer.ArtifactSigning.NotationPlugin.UnitTests
 
 .PHONY: help
 help:

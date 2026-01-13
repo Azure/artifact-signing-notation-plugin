@@ -1,5 +1,5 @@
 ---
-# Github workflow for Trusted Signing Notation plugin
+# Github workflow for Artifact Signing Notation plugin
 name: Build & Test
 
 on:
@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: linux-amd64-binary
-          path: ./bin/artifacts/notation-azure-trustedsigning_0.0.1_linux_amd64.tar.gz
+          path: ./bin/artifacts/notation-azure-artifactsigning_0.0.1_linux_amd64.tar.gz
           retention-days: 1
   test-linux-arm:
     name: Unit Testing and Build on Linux arm64
@@ -65,7 +65,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: linux-arm64-binary
-          path: ./bin/artifacts/notation-azure-trustedsigning_0.0.1_linux_arm64.tar.gz
+          path: ./bin/artifacts/notation-azure-artifactsigning_0.0.1_linux_arm64.tar.gz
           retention-days: 1
   test-macos:
     name: Unit Testing and Build on macOS x64 & arm64
@@ -91,7 +91,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: darwin-amd64-binary
-          path: ./bin/artifacts/notation-azure-trustedsigning_0.0.1_darwin_amd64.tar.gz
+          path: ./bin/artifacts/notation-azure-artifactsigning_0.0.1_darwin_amd64.tar.gz
           retention-days: 1
       - name: Build macOS arm Binary
         run: |
@@ -100,7 +100,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: darwin-arm64-binary
-          path: ./bin/artifacts/notation-azure-trustedsigning_0.0.1_darwin_arm64.tar.gz
+          path: ./bin/artifacts/notation-azure-artifactsigning_0.0.1_darwin_arm64.tar.gz
           retention-days: 1
   test-windows-2022:
     name: Unit Testing and Build on Windows (2022) x64
@@ -125,7 +125,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-amd64-binary
-          path: ./bin/artifacts/notation-azure-trustedsigning_0.0.1_windows_amd64.zip
+          path: ./bin/artifacts/notation-azure-artifactsigning_0.0.1_windows_amd64.zip
           retention-days: 1
   test-windows-2025:
     name: Unit Testing and Build on Windows (2025) x64
@@ -169,6 +169,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-arm64-binary
-          path: ./bin/artifacts/notation-azure-trustedsigning_0.0.1_windows_arm64.zip
+          path: ./bin/artifacts/notation-azure-artifactsigning_0.0.1_windows_arm64.zip
           retention-days: 1
-# TODO: Find a day to do E2E test using a trusted signing account
+# TODO: Find a day to do E2E test using an artifact signing account

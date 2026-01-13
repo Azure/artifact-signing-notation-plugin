@@ -1,54 +1,54 @@
-# Trusted Signing Notation Plugin
+# Artifact Signing Notation Plugin
 
-Trusted Signing Provider for the [Notation CLI](https://github.com/notaryproject/notation)
+Artifact Signing Provider for the [Notation CLI](https://github.com/notaryproject/notation)
 
-This Notation plugin allows you to use Microsoft's **Trusted Signing** service to sign and verify container images and other OCI artifacts. Signatures enable users to verify that these artifacts are from a trusted source and have not been tampered with since their release.
+This Notation plugin allows you to use Microsoft's **Artifact Signing** service to sign and verify container images and other OCI artifacts. Signatures enable users to verify that these artifacts are from a trusted source and have not been tampered with since their release.
 
-Please refer to [MS Learn Trusted Signing Documentation](https://learn.microsoft.com/en-us/azure/trusted-signing/) for more information on the service.
+Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsoft.com/en-us/azure/artifact-signing/) for more information on the service.
 
-# Installation of the trusted signing plugin
+# Installation of the artifact signing plugin
 
-1. Navigate to the [Releases](https://github.com/Azure/trustedsigning-notation-plugin/releases) page and choose a release of `notation-azure-trustedsigning`.
+1. Navigate to the [Releases](https://github.com/Azure/artifactsigning-notation-plugin/releases) page and choose a release of `notation-azure-artifactsigning`.
 2. Download, verify, and then install the specified version of the plugin.
 
    **Automatic installation**:
 
-   For Notation >= v1.1.0, please use [notation plugin install](https://github.com/notaryproject/notation/blob/v1.1.0/specs/commandline/plugin.md#notation-plugin-install) command to automatically install azure-trustedsigning plugin.
+   For Notation >= v1.1.0, please use [notation plugin install](https://github.com/notaryproject/notation/blob/v1.1.0/specs/commandline/plugin.md#notation-plugin-install) command to automatically install azure-artifactsigning plugin.
 
    For Linux amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-trustedsigning_1.0.0-beta.3_linux_amd64.tar.gz --sha256sum 0d33115709f6d71914cf834ae4ba827fc5178f13f4192a534eb65c72aa14b8cb
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_linux_amd64.tar.gz --sha256sum 0d33115709f6d71914cf834ae4ba827fc5178f13f4192a534eb65c72aa14b8cb
    ```
 
    For Linux arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-trustedsigning_1.0.0-beta.3_linux_arm64.tar.gz --sha256sum 534e88ca73471fda9e6c6d468691aa8960915d07be8dc1493a64f5b7e92f9617
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_linux_arm64.tar.gz --sha256sum 534e88ca73471fda9e6c6d468691aa8960915d07be8dc1493a64f5b7e92f9617
    ```
 
    For Windows amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-trustedsigning_1.0.0-beta.3_windows_amd64.zip --sha256sum fe66537e0b6b85395238d732ab58c1c85907cfb850d2205e4aa297ce2afb2c32
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_windows_amd64.zip --sha256sum fe66537e0b6b85395238d732ab58c1c85907cfb850d2205e4aa297ce2afb2c32
    ```
 
    For Windows arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-trustedsigning_1.0.0-beta.3_windows_arm64.zip --sha256sum 0186cda100bbcc958bbf0212b90e37dd5a5e95d7b27685c72683c26c265bb1d8
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_windows_arm64.zip --sha256sum 0186cda100bbcc958bbf0212b90e37dd5a5e95d7b27685c72683c26c265bb1d8
    ```
 
    For macOS amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-trustedsigning_1.0.0-beta.3_darwin_amd64.tar.gz --sha256sum a279650dc467f9f98ebd0bd5eb909bc23e158edf5cef8a1ce861a998d7015d81
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_darwin_amd64.tar.gz --sha256sum a279650dc467f9f98ebd0bd5eb909bc23e158edf5cef8a1ce861a998d7015d81
    ```
 
    For macOS arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-trustedsigning_1.0.0-beta.3_darwin_arm64.tar.gz --sha256sum b9b5a763c628a7d3b3452be69999c32dbead01bc40416a77025cdd407fd7a27d
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_darwin_arm64.tar.gz --sha256sum b9b5a763c628a7d3b3452be69999c32dbead01bc40416a77025cdd407fd7a27d
    ```
     **Manual installation**:
 
@@ -57,20 +57,20 @@ Please refer to [MS Learn Trusted Signing Documentation](https://learn.microsoft
    ```bash
    version=1.0.0-beta.3
    arch=amd64
-   install_path="${HOME}/.config/notation/plugins/azure-trustedsigning"
+   install_path="${HOME}/.config/notation/plugins/azure-artifactsigning"
 
    # download tarball and checksum
-   checksum_file="notation-azure-trustedsigning_${version}_checksums.txt"
-   tar_file="notation-azure-trustedsigning_${version}_linux_${arch}.tar.gz"
-   curl -Lo ${checksum_file} "https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v${version}/${checksum_file}"
-   curl -Lo ${tar_file} "https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v${version}/${tar_file}"
+   checksum_file="notation-azure-artifactsigning_${version}_checksums.txt"
+   tar_file="notation-azure-artifactsigning_${version}_linux_${arch}.tar.gz"
+   curl -Lo ${checksum_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${checksum_file}"
+   curl -Lo ${tar_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${tar_file}"
 
    # validate checksum
    grep ${tar_file} ${checksum_file} | sha256sum -c
 
    # install the plugin
    mkdir -p ${install_path}
-   tar xvzf ${tar_file} -C ${install_path} notation-azure-trustedsigning
+   tar xvzf ${tar_file} -C ${install_path} notation-azure-artifactsigning
    ```
 
    For macOS Zsh:
@@ -78,20 +78,20 @@ Please refer to [MS Learn Trusted Signing Documentation](https://learn.microsoft
    ```zsh
    version=1.0.0-beta.3
    arch=amd64
-   install_path="${HOME}/Library/Application Support/notation/plugins/azure-trustedsigning"
+   install_path="${HOME}/Library/Application Support/notation/plugins/azure-artifactsigning"
 
    # download tarball and checksum
-   checksum_file="notation-azure-trustedsigning_${version}_checksums.txt"
-   tar_file="notation-azure-trustedsigning_${version}_darwin_${arch}.tar.gz"
-   curl -Lo ${checksum_file} "https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v${version}/${checksum_file}"
-   curl -Lo ${tar_file} "https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v${version}/${tar_file}"
+   checksum_file="notation-azure-artifactsigning_${version}_checksums.txt"
+   tar_file="notation-azure-artifactsigning_${version}_darwin_${arch}.tar.gz"
+   curl -Lo ${checksum_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${checksum_file}"
+   curl -Lo ${tar_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${tar_file}"
 
    # validate checksum
    grep ${tar_file} ${checksum_file} | shasum -a 256 -c
 
    # install the plugin
    mkdir -p ${install_path}
-   tar xvzf ${tar_file} -C ${install_path} notation-azure-trustedsigning
+   tar xvzf ${tar_file} -C ${install_path} notation-azure-artifactsigning
    ```
 
    For Windows Powershell:
@@ -99,13 +99,13 @@ Please refer to [MS Learn Trusted Signing Documentation](https://learn.microsoft
    ```powershell
    $version = "1.0.0-beta.3"
    $arch = "amd64"
-   $install_path = "${env:AppData}\notation\plugins\azure-trustedsigning"
+   $install_path = "${env:AppData}\notation\plugins\azure-artifactsigning"
 
    # download zip file and checksum
-   $checksum_file = "notation-azure-trustedsigning_${version}_checksums.txt"
-   $zip_file = "notation-azure-trustedsigning_${version}_windows_${arch}.zip"
-   Invoke-WebRequest -OutFile ${checksum_file} "https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v${version}/${checksum_file}"
-   Invoke-WebRequest -OutFile ${zip_file} "https://github.com/Azure/trustedsigning-notation-plugin/releases/download/v${version}/${zip_file}"
+   $checksum_file = "notation-azure-artifactsigning_${version}_checksums.txt"
+   $zip_file = "notation-azure-artifactsigning_${version}_windows_${arch}.zip"
+   Invoke-WebRequest -OutFile ${checksum_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${checksum_file}"
+   Invoke-WebRequest -OutFile ${zip_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${zip_file}"
 
    # validate checksum
    $checksum = (Get-Content ${checksum_file} | Select-String -List ${zip_file}).Line.Split() | Where-Object {$_}
@@ -118,11 +118,11 @@ Please refer to [MS Learn Trusted Signing Documentation](https://learn.microsoft
    Expand-Archive -Path ${zip_file} -DestinationPath ${install_path}
    ```
 
-3. Run `notation plugin list` and confirm the `azure-trustedsigning` plugin is installed.
+3. Run `notation plugin list` and confirm the `azure-artifactsigning` plugin is installed.
 
 ## Getting started
 
-1. [Sign and verify an artifact with with a trusted signing certficate profile](docs/sign-and-verify.md)
+1. [Sign and verify an artifact with with a artifact signing certficate profile](docs/sign-and-verify.md)
 
 
 ## Contributing

@@ -23,7 +23,7 @@ cd "$release_assets_dir"
 mv "${artifacts[@]}" ./
 
 # create checksums
-shasum -a 256 -- * > "notation-azure-trustedsigning_${version}_checksums.txt"
+shasum -a 256 -- * > "notation-azure-artifactsigning_${version}_checksums.txt"
 
 # Create a release using GitHub CLI
 if [[ "$tag_name" == *"-"* ]]; then

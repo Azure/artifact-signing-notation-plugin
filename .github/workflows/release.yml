@@ -1,5 +1,5 @@
 ---
-name: Release notation-azure-trustedsigning plugin
+name: Release notation-azure-artifactsigning plugin
 
 on:
   push:

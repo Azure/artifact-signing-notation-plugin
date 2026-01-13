@@ -4,7 +4,6 @@ import subprocess
 import tarfile
 import zipfile
 
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("version", help="The version tag, starts with v")
@@ -18,7 +17,7 @@ def main():
     args = parser.parse_args()
 
     version = args.version.lstrip("v")
-    project_name = "notation-azure-trustedsigning"
+    project_name = "notation-azure-artifactsigning"
     output_dir = os.path.join(".", "bin", "publish")
     os.makedirs(output_dir, exist_ok=True)
     artifacts_dir = os.path.join(".", "bin", "artifacts")
@@ -34,7 +33,7 @@ def main():
     publish_command = [
         "dotnet",
         "publish",
-        "./Azure.Developer.TrustedSigning.NotationPlugin",
+        "./Azure.Developer.ArtifactSigning.NotationPlugin",
         "--configuration", "Release",
         "--self-contained", "true",
         f"-p:CommitHash={commit_hash}",

@@ -3,7 +3,7 @@ version: 2
 updates:
   - package-ecosystem: "nuget"
     directories:
-      - "/Azure.Developer.TrustedSigning.NotationPlugin" #Azure.Developer.TrustedSigning.NotationPlugin.csproj
-      - "/Azure.Developer.TrustedSigning.NotationPlugin.UnitTests" #Azure.Developer.TrustedSigning.NotationPlugin.UnitTests.csproj
+      - "/Azure.Developer.ArtifactSigning.NotationPlugin" #Azure.Developer.ArtifactSigning.NotationPlugin.csproj
+      - "/Azure.Developer.ArtifactSigning.NotationPlugin.UnitTests" #Azure.Developer.ArtifactSigning.NotationPlugin.UnitTests.csproj
     schedule:
       interval: "weekly"

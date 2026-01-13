@@ -18,44 +18,44 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
    For Linux amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_linux_amd64.tar.gz --sha256sum 0d33115709f6d71914cf834ae4ba827fc5178f13f4192a534eb65c72aa14b8cb
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_linux_amd64.tar.gz --sha256sum 2f45891a14aa9c88c9bee3d11a887c1adbe9d2d24e50de4bc4b4fa3fe595292f
    ```
 
    For Linux arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_linux_arm64.tar.gz --sha256sum 534e88ca73471fda9e6c6d468691aa8960915d07be8dc1493a64f5b7e92f9617
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_linux_arm64.tar.gz --sha256sum 766a9ea27fb108495103dde320a3aa090ed72aeb33c3ffeb55208cede7d7b93f
    ```
 
    For Windows amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_windows_amd64.zip --sha256sum fe66537e0b6b85395238d732ab58c1c85907cfb850d2205e4aa297ce2afb2c32
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_windows_amd64.zip --sha256sum adf5e3d7f1fa41db9786d0ed5362e9b61c4def0e694da33fdb2ad2dd44cd57b7
    ```
 
    For Windows arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_windows_arm64.zip --sha256sum 0186cda100bbcc958bbf0212b90e37dd5a5e95d7b27685c72683c26c265bb1d8
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_windows_arm64.zip --sha256sum 2a2978f0b809a6bd82854080949513a02be76f1159ff52dfcc4a3bf5dfe8df66
    ```
 
    For macOS amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_darwin_amd64.tar.gz --sha256sum a279650dc467f9f98ebd0bd5eb909bc23e158edf5cef8a1ce861a998d7015d81
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_darwin_amd64.tar.gz --sha256sum a2860a36cb8871da1e942b9309e1294c12d5b324d2a69f57ca6ee9aab49190e1
    ```
 
    For macOS arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0-beta.3/notation-azure-artifactsigning_1.0.0-beta.3_darwin_arm64.tar.gz --sha256sum b9b5a763c628a7d3b3452be69999c32dbead01bc40416a77025cdd407fd7a27d
+   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_darwin_arm64.tar.gz --sha256sum fde12e5c4b3099c2d1fe8d0fb68f4b9ae77347340f81e0b3405cee7ffc59ea21
    ```
     **Manual installation**:
 
    For Linux Bash:
 
    ```bash
-   version=1.0.0-beta.3
+   version=1.0.0
    arch=amd64
    install_path="${HOME}/.config/notation/plugins/azure-artifactsigning"
 
@@ -76,7 +76,7 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
    For macOS Zsh:
 
    ```zsh
-   version=1.0.0-beta.3
+   version=1.0.0
    arch=amd64
    install_path="${HOME}/Library/Application Support/notation/plugins/azure-artifactsigning"
 
@@ -97,7 +97,7 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
    For Windows Powershell:
 
    ```powershell
-   $version = "1.0.0-beta.3"
+   $version = "1.0.0"
    $arch = "amd64"
    $install_path = "${env:AppData}\notation\plugins\azure-artifactsigning"
 
@@ -123,7 +123,6 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
 ## Getting started
 
 1. [Sign and verify an artifact with with a artifact signing certficate profile](docs/sign-and-verify.md)
-
 
 ## Contributing
 

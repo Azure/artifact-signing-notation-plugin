@@ -18,37 +18,37 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
    For Linux amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_linux_amd64.tar.gz --sha256sum 2f45891a14aa9c88c9bee3d11a887c1adbe9d2d24e50de4bc4b4fa3fe595292f
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_linux_amd64.tar.gz --sha256sum 2f45891a14aa9c88c9bee3d11a887c1adbe9d2d24e50de4bc4b4fa3fe595292f
    ```
 
    For Linux arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_linux_arm64.tar.gz --sha256sum 766a9ea27fb108495103dde320a3aa090ed72aeb33c3ffeb55208cede7d7b93f
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_linux_arm64.tar.gz --sha256sum 766a9ea27fb108495103dde320a3aa090ed72aeb33c3ffeb55208cede7d7b93f
    ```
 
    For Windows amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_windows_amd64.zip --sha256sum adf5e3d7f1fa41db9786d0ed5362e9b61c4def0e694da33fdb2ad2dd44cd57b7
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_windows_amd64.zip --sha256sum adf5e3d7f1fa41db9786d0ed5362e9b61c4def0e694da33fdb2ad2dd44cd57b7
    ```
 
    For Windows arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_windows_arm64.zip --sha256sum 2a2978f0b809a6bd82854080949513a02be76f1159ff52dfcc4a3bf5dfe8df66
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_windows_arm64.zip --sha256sum 2a2978f0b809a6bd82854080949513a02be76f1159ff52dfcc4a3bf5dfe8df66
    ```
 
    For macOS amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_darwin_amd64.tar.gz --sha256sum a2860a36cb8871da1e942b9309e1294c12d5b324d2a69f57ca6ee9aab49190e1
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_darwin_amd64.tar.gz --sha256sum a2860a36cb8871da1e942b9309e1294c12d5b324d2a69f57ca6ee9aab49190e1
    ```
 
    For macOS arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0-beta.3_darwin_arm64.tar.gz --sha256sum fde12e5c4b3099c2d1fe8d0fb68f4b9ae77347340f81e0b3405cee7ffc59ea21
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_darwin_arm64.tar.gz --sha256sum fde12e5c4b3099c2d1fe8d0fb68f4b9ae77347340f81e0b3405cee7ffc59ea21
    ```
     **Manual installation**:
 
@@ -62,8 +62,8 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
    # download tarball and checksum
    checksum_file="notation-azure-artifactsigning_${version}_checksums.txt"
    tar_file="notation-azure-artifactsigning_${version}_linux_${arch}.tar.gz"
-   curl -Lo ${checksum_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${checksum_file}"
-   curl -Lo ${tar_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${tar_file}"
+   curl -Lo ${checksum_file} "https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v${version}/${checksum_file}"
+   curl -Lo ${tar_file} "https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v${version}/${tar_file}"
 
    # validate checksum
    grep ${tar_file} ${checksum_file} | sha256sum -c
@@ -83,8 +83,8 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
    # download tarball and checksum
    checksum_file="notation-azure-artifactsigning_${version}_checksums.txt"
    tar_file="notation-azure-artifactsigning_${version}_darwin_${arch}.tar.gz"
-   curl -Lo ${checksum_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${checksum_file}"
-   curl -Lo ${tar_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${tar_file}"
+   curl -Lo ${checksum_file} "https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v${version}/${checksum_file}"
+   curl -Lo ${tar_file} "https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v${version}/${tar_file}"
 
    # validate checksum
    grep ${tar_file} ${checksum_file} | shasum -a 256 -c
@@ -104,8 +104,8 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
    # download zip file and checksum
    $checksum_file = "notation-azure-artifactsigning_${version}_checksums.txt"
    $zip_file = "notation-azure-artifactsigning_${version}_windows_${arch}.zip"
-   Invoke-WebRequest -OutFile ${checksum_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${checksum_file}"
-   Invoke-WebRequest -OutFile ${zip_file} "https://github.com/Azure/artifactsigning-notation-plugin/releases/download/v${version}/${zip_file}"
+   Invoke-WebRequest -OutFile ${checksum_file} "https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v${version}/${checksum_file}"
+   Invoke-WebRequest -OutFile ${zip_file} "https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v${version}/${zip_file}"
 
    # validate checksum
    $checksum = (Get-Content ${checksum_file} | Select-String -List ${zip_file}).Line.Split() | Where-Object {$_}

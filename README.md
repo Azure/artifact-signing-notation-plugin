@@ -18,44 +18,44 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
    For Linux amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_linux_amd64.tar.gz --sha256sum 2f45891a14aa9c88c9bee3d11a887c1adbe9d2d24e50de4bc4b4fa3fe595292f
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.1.0/notation-azure-artifactsigning_1.1.0_linux_amd64.tar.gz --sha256sum 459075a5cdadcdba334b728838d617fa330f19b45848ba993a4d2a061f49d4ac
    ```
 
    For Linux arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_linux_arm64.tar.gz --sha256sum 766a9ea27fb108495103dde320a3aa090ed72aeb33c3ffeb55208cede7d7b93f
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.1.0/notation-azure-artifactsigning_1.1.0_linux_arm64.tar.gz --sha256sum d30290451e24e172578d54069e8ff7b775bd79d8ecfc3175c627aa470e83c6a3
    ```
 
    For Windows amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_windows_amd64.zip --sha256sum adf5e3d7f1fa41db9786d0ed5362e9b61c4def0e694da33fdb2ad2dd44cd57b7
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.1.0/notation-azure-artifactsigning_1.1.0_windows_amd64.zip --sha256sum 4ffcc892675ab32a3cd22c00e7c1cb16d6361e35c2093b2a9518c1a8ff4312b0
    ```
 
    For Windows arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_windows_arm64.zip --sha256sum 2a2978f0b809a6bd82854080949513a02be76f1159ff52dfcc4a3bf5dfe8df66
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.1.0/notation-azure-artifactsigning_1.1.0_windows_arm64.zip --sha256sum efdc619eee543eb596481599e78c87beab2a920ce0e774e2475031c26537a06d
    ```
 
    For macOS amd64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_darwin_amd64.tar.gz --sha256sum a2860a36cb8871da1e942b9309e1294c12d5b324d2a69f57ca6ee9aab49190e1
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.1.0/notation-azure-artifactsigning_1.1.0_darwin_amd64.tar.gz --sha256sum be6719628f038e2e0b4f09ea1f03623bc238e203f2ea52cdc2aca785aa2a6221
    ```
 
    For macOS arm64:
 
    ```
-   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.0.0/notation-azure-artifactsigning_1.0.0_darwin_arm64.tar.gz --sha256sum fde12e5c4b3099c2d1fe8d0fb68f4b9ae77347340f81e0b3405cee7ffc59ea21
+   notation plugin install --url https://github.com/Azure/artifact-signing-notation-plugin/releases/download/v1.1.0/notation-azure-artifactsigning_1.1.0_darwin_arm64.tar.gz --sha256sum f9ff085c86474b2371cf3acd70e24f067df2f5c2c3240e101957d99b55d480f0
    ```
     **Manual installation**:
 
    For Linux Bash:
 
    ```bash
-   version=1.0.0
+   version=1.1.0
    arch=amd64
    install_path="${HOME}/.config/notation/plugins/azure-artifactsigning"
 
@@ -76,7 +76,7 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
    For macOS Zsh:
 
    ```zsh
-   version=1.0.0
+   version=1.1.0
    arch=amd64
    install_path="${HOME}/Library/Application Support/notation/plugins/azure-artifactsigning"
 
@@ -97,7 +97,7 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
    For Windows Powershell:
 
    ```powershell
-   $version = "1.0.0"
+   $version = "1.1.0"
    $arch = "amd64"
    $install_path = "${env:AppData}\notation\plugins\azure-artifactsigning"
 

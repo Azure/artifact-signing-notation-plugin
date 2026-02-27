@@ -124,6 +124,10 @@ Please refer to [MS Learn Artifact Signing Documentation](https://learn.microsof
 
 1. [Sign and verify an artifact with with a artifact signing certficate profile](docs/sign-and-verify.md)
 
+## Registry support
+
+This plugin supports signing and verifying artifacts in any OCI-compliant registry, see here for a list of [supported registries](https://notaryproject.dev/docs/registry-support/).  Some registries may have specific requirements or limitations regarding artifact signing.  Please refer to your registry's documentation for more information.
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a

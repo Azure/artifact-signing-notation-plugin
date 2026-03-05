@@ -17,6 +17,14 @@ notation key add "<<keyname>>" --plugin azure-artifactsigning --plugin-config ac
 
 > They key name is an user friendly name to refer to during sign operations from the CLI. The id is a unique identifier only known to the plugin. For more information, see [Plugin usage](https://github.com/notaryproject/specifications/blob/v1.0.0/specs/plugin-extensibility.md#using-a-plugin-for-signing)
 
+## Obtain timestamping root certificate
+
+Given that Artifact Signing uses short lived keys, timestamping is required to ensure the validity of signatures beyond the expiration of the signing key. To obtain the needed TSA root certificate, run the following command:
+
+```sh
+curl -o msft-tsa-root.crt \
+  "http://www.microsoft.com/pkiops/certs/microsoft%20identity%20verification%20root%20certificate%20authority%202020.crt"
+```
 
 ## Signing an artifact
 
@@ -46,7 +54,7 @@ notation key add "<<keyname>>" --plugin azure-artifactsigning --plugin-config ac
    ```
 5. Sign the image with the artifact signing key:
    ```sh
-   notation sign $server/hello-world:v1 --key "<<keyname>>"
+   notation sign $server/hello-world:v1 --key "<<keyname>>" --timestamp-url 'http://timestamp.acs.microsoft.com' --timestamp-root-cert 'msft-tsa-root.crt'
    ```
 6. A message indicating `Successfully signed $server/hello-world:v1@sha256:...` is displayed.
 

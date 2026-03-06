@@ -19,7 +19,7 @@ notation key add "<<keyname>>" --plugin azure-artifactsigning --plugin-config ac
 
 ## Obtain timestamping root certificate
 
-Given that Artifact Signing uses short lived keys, timestamping is required to ensure the validity of signatures beyond the expiration of the signing key. To obtain the needed TSA root certificate, run the following command:
+Given that Artifact Signing uses short-lived keys, timestamping is required to ensure the validity of signatures beyond the expiration of the signing key. To obtain the needed TSA root certificate, run the following command:
 
 ```sh
 curl -o msft-tsa-root.crt \

@@ -1,5 +1,5 @@
 ---
-# Github workflow to Release the Artifact Signing Notation using a tag push.
+# GitHub workflow to Release the Artifact Signing Notation using a tag push.
 name: Release notation-azure-artifactsigning plugin
 
 on:

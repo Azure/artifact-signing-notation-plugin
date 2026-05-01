@@ -21,7 +21,7 @@ make build                # dotnet build -c Release, single-file self-contained
 make test                 # dotnet test with TRX logger + XPlat Code Coverage
 ```
 
-Run a single test (Makefile has no helper):
+Run a single test using dotnet (Makefile has no helper):
 
 ```bash
 dotnet test Azure.Developer.ArtifactSigning.NotationPlugin.UnitTests \

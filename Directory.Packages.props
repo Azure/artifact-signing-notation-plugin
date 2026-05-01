@@ -7,7 +7,7 @@
     <PackageVersion Include="Azure.Developer.ArtifactSigning.CryptoProvider" Version="0.1.72" />
     <PackageVersion Include="Azure.Identity" Version="1.21.0" />
     <PackageVersion Include="coverlet.collector" Version="10.0.0" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.4.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.5.1" />
     <PackageVersion Include="Moq" Version="4.20.72" />
     <PackageVersion Include="xunit" Version="2.9.3" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />

@@ -28,11 +28,14 @@ public class PluginUsageTests : TestBase, IDisposable
     }
 
     [Fact]
-    public void MainMethod_OutputsException_ForValidSignRequestWithContextException()
+    public void MainMethod_OutputsGenericError_ForUnexpectedException()
     {
         // Arrange
         string[] args = ["generate-signature"];
-        var (outWriter, errorWriter) = SetupConsoleRedirection(ValidSignatureRequest);
+        var (outWriter, errorWriter) = SetupConsoleRedirection();
+        StringReader disposedReader = new("anything");
+        disposedReader.Dispose();
+        Console.SetIn(disposedReader);
 
         // Act
         int output = Program.Main(args);

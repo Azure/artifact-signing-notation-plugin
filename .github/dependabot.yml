@@ -7,3 +7,12 @@ updates:
       - "/Azure.Developer.ArtifactSigning.NotationPlugin.UnitTests" #Azure.Developer.ArtifactSigning.NotationPlugin.UnitTests.csproj
     schedule:
       interval: "weekly"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    groups:
+      github-actions:
+        patterns: ["*"]
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7

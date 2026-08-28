@@ -38,18 +38,18 @@ jobs:
     runs-on: ${{ matrix.config.os }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
           fetch-depth: 0
       - name: Setup .NET
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5.4.0
         with:
           dotnet-version: '10.0.x'
       - name: Build .NET project
         shell: bash
         run: python3 ./scripts/build.py "${GITHUB_REF_NAME}" ${{ matrix.config.runtime }} ${{ matrix.config.build_args }}
       - name: Upload ${{ matrix.config.runtime }} artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: ${{ matrix.config.runtime }}
           path: ${{ github.workspace }}/bin/artifacts/*
@@ -60,11 +60,11 @@ jobs:
       needs: Build
       steps:
         - name: Checkout
-          uses: actions/checkout@v5
+          uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
           with:
             fetch-depth: 0
         - name: Download artifacts
-          uses: actions/download-artifact@v7
+          uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
           with:
             path: ${{ github.workspace }}/bin/artifacts
         - name: Create release

@@ -1,5 +1,5 @@
 <Project>
-  <PropertyGroup>
-    <IsTestingPlatformApplication>false</IsTestingPlatformApplication>
+  <PropertyGroup Condition="$(MSBuildProjectName.EndsWith('.UnitTests'))">
+    <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
   </PropertyGroup>
 </Project>

@@ -20,4 +20,4 @@ build: ## builds binaries
 .PHONY: test
 test: ## run unit test
 	rm -rf $(BUILD_DIR)/TestResults
-	dotnet test $(TEST_PROJECT_DIR) --collect:"XPlat Code Coverage" --logger trx --results-directory $(BUILD_DIR)/TestResults
+	dotnet test --project $(TEST_PROJECT_DIR) --coverlet --coverlet-output-format cobertura --coverlet-include "[Azure.Developer.ArtifactSigning.NotationPlugin]*" --coverlet-exclude "[*.UnitTests]*" --report-trx --results-directory $(BUILD_DIR)/TestResults

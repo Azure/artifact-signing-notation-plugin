@@ -18,14 +18,14 @@ Targets **.NET 10** with central package management (`Directory.Packages.props`)
 
 ```bash
 make build                # dotnet build -c Release, single-file self-contained
-make test                 # dotnet test with TRX logger + XPlat Code Coverage
+make test                 # Microsoft.Testing.Platform with TRX reports + Coverlet coverage
 ```
 
 Run a single test using dotnet (Makefile has no helper):
 
 ```bash
-dotnet test Azure.Developer.ArtifactSigning.NotationPlugin.UnitTests \
-  --filter "FullyQualifiedName~PluginUsageTests.MainMethod_OutputsSuccess_ForValidMetadataRequest"
+dotnet test --project Azure.Developer.ArtifactSigning.NotationPlugin.UnitTests \
+  --filter-method "*PluginUsageTests.MainMethod_OutputsSuccess_ForValidMetadataRequest"
 ```
 
 Produce release artifacts (zip/tar.gz with renamed binary) using:

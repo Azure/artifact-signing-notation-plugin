@@ -7,7 +7,7 @@
     <PackageVersion Include="Azure.Developer.ArtifactSigning.CryptoProvider" Version="0.1.72" />
     <PackageVersion Include="Azure.Identity" Version="1.21.0" />
     <PackageVersion Include="coverlet.MTP" Version="10.1.0" />
-    <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport" Version="2.3.3" />
+    <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport" Version="2.5.1" />
     <PackageVersion Include="Moq" Version="4.21.0" />
     <PackageVersion Include="xunit.v3" Version="4.0.1" />
   </ItemGroup>

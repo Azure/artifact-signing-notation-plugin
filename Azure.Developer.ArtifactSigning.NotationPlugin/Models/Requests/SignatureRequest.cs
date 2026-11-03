@@ -42,6 +42,7 @@ internal class SignatureRequest : BaseRequest
     {
         if (string.IsNullOrWhiteSpace(excludeCredentials))
         {
+            // CodeQL [SM05137] justification "This CLI plugin intentionally supports multiple Azure authentication methods."
             return new DefaultAzureCredential();
         }
 
@@ -66,6 +67,7 @@ internal class SignatureRequest : BaseRequest
             ExcludeInteractiveBrowserCredential = providedCredentials.Contains(CredentialOptions.InteractiveBrowser, stringComparer),
         };
 
+        // CodeQL [SM05137] justification "This CLI plugin intentionally supports multiple Azure authentication methods."
         return new DefaultAzureCredential(authOptions);
     }
 }
